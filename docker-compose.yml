@@ -1,0 +1,24 @@
+services:
+
+  portfolio:
+    build:
+      context: ./portfolio-app
+    container_name: portfolio-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - security_data:/app/database
+    restart: unless-stopped
+
+  security-lab:
+    build:
+      context: ./security-lab
+    container_name: security-lab
+    ports:
+      - "5001:5001"
+    volumes:
+      - security_data:/app/database
+    restart: unless-stopped
+
+volumes:
+  security_data:

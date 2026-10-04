@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication Error</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="auth-wrapper">
+        <div class="container">
+            <div class="auth-header-icon" style="background: rgba(244, 63, 94, 0.15); border-color: rgba(244, 63, 94, 0.35);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+            </div>
+
+            <h1>Authentication Error</h1>
+            <p class="auth-subtitle">Access Denied • Security Check Required</p>
+
+            {% if error %}
+            <div class="error">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+                <span>{{ error }}</span>
+            </div>
+            {% endif %}
+
+            <div style="margin-top: 24px; text-align: center;">
+                <a href="{{ url_for('login') }}" class="btn-github" style="justify-content: center; width: 100%; display: flex; text-decoration: none;">Try Login Again</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

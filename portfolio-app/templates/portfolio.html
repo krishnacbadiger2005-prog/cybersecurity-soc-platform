@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Badiger — Cybersecurity Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="nav-brand">
+            <div class="nav-shield-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+            </div>
+            <h2>Krishna Badiger <span>// Portfolio</span></h2>
+        </div>
+        <div class="nav-actions">
+            <div class="nav-user-pill">
+                <span class="user-dot"></span>
+                <span>Welcome, {{ username }}</span>
+            </div>
+            <a href="http://127.0.0.1:5001/dashboard" target="_blank" class="nav-link-soc" title="Launch Security Monitoring Lab">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                    <line x1="8" y1="21" x2="16" y2="21"></line>
+                    <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+                SOC Monitor Lab
+            </a>
+            <a href="{{ url_for('logout') }}" class="nav-link-logout">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                    <polyline points="16 17 21 12 16 7"></polyline>
+                    <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+                Logout
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Portfolio Content -->
+    <main class="portfolio">
+
+        <!-- Hero Section Card -->
+        <section class="hero-card">
+            <div class="hero-badge-row">
+                <span class="security-badge">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    Cybersecurity Specialist
+                </span>
+                <span class="live-badge">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor">
+                        <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                    IDS Engine Active
+                </span>
+                <span class="tag-pill" style="border-color: rgba(99, 102, 241, 0.4); color: #c7d2fe;">
+                    Network Defense & Packet Forensics
+                </span>
+            </div>
+
+            <h1>Welcome to My Portfolio</h1>
+            <div style="font-size: 26px; font-weight: 700; color: #ffffff; margin-top: 4px; margin-bottom: 8px;">
+                Krishna Badiger
+            </div>
+            <div class="hero-tagline">
+                Cybersecurity / Network Security | Python | Networking
+            </div>
+
+            <div class="contact-bar">
+                <a href="mailto:krishna.c.badiger2005@gmail.com" class="contact-chip">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    krishna.c.badiger2005@gmail.com
+                </a>
+
+                <a href="https://www.linkedin.com/in/krishna-badiger-8990543bb/" target="_blank" rel="noopener noreferrer" class="contact-chip">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                    LinkedIn Profile
+                </a>
+
+                <a href="https://github.com/krishnacbadiger2005-prog" target="_blank" rel="noopener noreferrer" class="contact-chip">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    GitHub Profile
+                </a>
+
+                <a href="tel:9019091863" class="contact-chip">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    +91 9019091863
+                </a>
+            </div>
+        </section>
+
+        <!-- Professional Summary Section -->
+        <section class="section-card">
+            <h2>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                Professional Summary
+            </h2>
+            <p class="summary-text">
+                Computer Science undergraduate with hands-on experience in Python, computer networking, packet analysis, and cybersecurity. Developed a live network packet analyzer and lightweight IDS using Python, Scapy, and Npcap, with protocol analysis and security detection capabilities. Seeking entry-level opportunities in cybersecurity, SOC, or network security.
+            </p>
+        </section>
+
+        <!-- Featured Project Section -->
+        <section class="section-card">
+            <h2>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+                Featured Engineering Project
+            </h2>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <div class="project-title">
+                        Intelligent Protocol Analyzer &amp; Lightweight IDS
+                    </div>
+                    <a href="https://github.com/krishnacbadiger2005-prog/intelligent-network-ids" target="_blank" rel="noopener noreferrer" class="btn-github">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        View on GitHub
+                    </a>
+                </div>
+
+                <div class="project-tags">
+                    <span class="tag-pill">Python</span>
+                    <span class="tag-pill">Scapy</span>
+                    <span class="tag-pill">Npcap</span>
+                    <span class="tag-pill">REST API</span>
+                    <span class="tag-pill">WebSocket</span>
+                    <span class="tag-pill">SQLite</span>
+                    <span class="tag-pill">JavaScript</span>
+                    <span class="tag-pill">YAML Rules</span>
+                </div>
+
+                <ul class="project-bullets">
+                    <li>Developed a live packet analyzer and lightweight IDS for real-time network traffic monitoring using Python, Scapy, and Npcap.</li>
+                    <li>Implemented protocol parsing, stateful session tracking, TCP stream reassembly, and HTTP/DNS/TLS metadata analysis.</li>
+                    <li>Implemented detection mechanisms for DNS tunnelling, ARP spoofing, and TCP/UDP port scanning, with configurable YAML-based rules.</li>
+                    <li>Built a web dashboard with REST APIs and WebSocket-based live updates for packet monitoring, traffic statistics, filtering, and security alerts.</li>
+                </ul>
+
+                <div class="project-actions">
+                    <a href="http://127.0.0.1:5001/dashboard" target="_blank" class="nav-link-soc" style="font-size: 13px;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Launch Interactive SOC Dashboard
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section class="section-card">
+            <h2>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                Technical Skills
+            </h2>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-cat-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="4 17 10 11 4 5"></polyline>
+                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                        </svg>
+                        Languages
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">SQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-cat-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                        Cybersecurity
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill">IDS (Intrusion Detection)</span>
+                        <span class="skill-pill">Network Security</span>
+                        <span class="skill-pill">Packet Analysis</span>
+                        <span class="skill-pill">DNS Tunneling Detection</span>
+                        <span class="skill-pill">ARP Spoofing Detection</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-cat-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="2" y1="12" x2="22" y2="12"></line>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                        </svg>
+                        Networking
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill">TCP/IP</span>
+                        <span class="skill-pill">HTTP</span>
+                        <span class="skill-pill">DNS</span>
+                        <span class="skill-pill">TLS</span>
+                        <span class="skill-pill">TCP/UDP</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-cat-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                        </svg>
+                        Tools / Technologies
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Scapy</span>
+                        <span class="skill-pill">Npcap</span>
+                        <span class="skill-pill">REST APIs</span>
+                        <span class="skill-pill">WebSockets</span>
+                        <span class="skill-pill">SQLite</span>
+                        <span class="skill-pill">Git / GitHub</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-cat-title">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        Web Technologies
+                    </div>
+                    <div class="skill-pills">
+                        <span class="skill-pill">HTML5</span>
+                        <span class="skill-pill">CSS3</span>
+                        <span class="skill-pill">JavaScript (ES6+)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications (Two Column Layout) -->
+        <section class="two-col-grid">
+            <div class="edu-card">
+                <h2 style="font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366f1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                    Education
+                </h2>
+                <div class="edu-institution">KLE Institute of Technology</div>
+                <div class="edu-degree">Bachelor of Engineering – Computer Science</div>
+                <div class="edu-meta">
+                    <span>Expected Graduation: 2027</span>
+                    <span>•</span>
+                    <span style="color: var(--accent-emerald); font-weight: 600;">CGPA: 7.14/10</span>
+                </div>
+            </div>
+
+            <div class="cert-card">
+                <h2 style="font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="8" r="7"></circle>
+                        <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                    </svg>
+                    Certifications
+                </h2>
+                <ul class="cert-list">
+                    <li class="cert-item">
+                        <span class="cert-badge-dot"></span>
+                        <div style="flex: 1;">
+                            <div style="font-weight: 600; color: #ffffff;">Cybersecurity Fundamentals</div>
+                        </div>
+                        <span class="cert-issuer">IBM</span>
+                    </li>
+                    <li class="cert-item">
+                        <span class="cert-badge-dot"></span>
+                        <div style="flex: 1;">
+                            <div style="font-weight: 600; color: #ffffff;">Cisco Packet Tracer</div>
+                        </div>
+                        <span class="cert-issuer">Cisco Networking Academy</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="portfolio-footer">
+            <p>© 2026 Krishna Badiger • Cybersecurity, Network Defense &amp; Protocol Analysis • All rights reserved.</p>
+            <p style="margin-top: 6px; font-size: 12px; color: var(--text-muted); font-family: var(--font-mono);">
+                Protected by SHA-256 Authentication Logging &amp; Real-Time Intrusion Detection System
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
